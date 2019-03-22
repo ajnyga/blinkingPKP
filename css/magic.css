@@ -1,0 +1,35 @@
+/**
+ * @file css/magic.css
+ *
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for enhanced OJS experience
+ *
+ */
+
+
+
+@-moz-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Firefox */
+@-webkit-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Webkit */
+@-ms-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* IE */
+@keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Opera and prob css3 final iteration */
+
+.pkp_brand_footer img {
+	-moz-transition:all 1s ease-in-out;
+	-webkit-transition:all 1s ease-in-out;
+	-o-transition:all 1s ease-in-out;
+	-ms-transition:all 1s ease-in-out;
+	transition:all 1s ease-in-out;
+	/* order: name, direction, duration, iteration-count, timing-function */   
+	-moz-animation:blink normal 1s infinite ease-in-out; /* Firefox */
+	-webkit-animation:blink normal 1s infinite ease-in-out; /* Webkit */
+	-ms-animation:blink normal 1s infinite ease-in-out; /* IE */
+	animation:blink normal 1s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}
+
+.pkp_brand_footer img {
+    animation: 1s ease-in-out 0s normal none infinite blink;
+    transition: all 1s ease-in-out 0s;
+}
