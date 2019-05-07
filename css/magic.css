@@ -9,7 +9,9 @@
  *
  */
 
-
+body, a, h1, h2, h3, button, span, div {
+	font-family: 'Indie Flower', cursive !important;
+}
 
 @-moz-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Firefox */
 @-webkit-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}} /* Webkit */
