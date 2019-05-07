@@ -33,3 +33,7 @@
     animation: 1s ease-in-out 0s normal none infinite blink;
     transition: all 1s ease-in-out 0s;
 }
+
+.pkp_brand_footer {
+	background: 75% 50% / 10% no-repeat url("../images/pikachu.gif");
+}
