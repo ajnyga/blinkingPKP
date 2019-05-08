@@ -41,12 +41,13 @@ class BlinkingPKPPlugin extends GenericPlugin {
 		if (!is_a($request->getRouter(), 'PKPPageRouter')) return false;
 		$templateManager =& $args[0];
 
+		$templateManager->addHeader('customFont', '<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">', array('contexts' => array('frontend', 'backend')));
 		$templateManager->addStyleSheet(
 			'enhanceSite',
 			$request->getBaseUrl() . '/' . $this->getPluginPath() . '/css/magic.css',
 			array(
 				'priority' => STYLE_SEQUENCE_LATE,
-				'contexts' => 'frontend',
+				'contexts' => array('frontend', 'backend'),
 			)
 		);
 		return false;
